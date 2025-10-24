@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+  color: #F0EEE9;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  background-color: #121212;
+}
+main nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.8rem 1rem;
+}
+main nav #brand-name a {
+  font-size: 1.2rem;
+  font-weight: 200;
+  text-decoration: none;
+}
+main nav #nav-options a {
+  text-decoration: none;
+  background-color: #1E1E1E;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+}
+main nav #nav-options i {
+  font-size: 1.5rem;
+  background-color: #1E1E1E;
+  border-radius: 0.5rem;
+}
+main section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0rem 1rem;
+}
+main section img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+main section .text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  justify-content: space-between;
+  padding: 2.2rem 2rem;
+  background-color: #1E1E1E;
+  font-size: 1rem;
+}
+main section .text-box .top {
+  font-weight: 400;
+}
+main section .text-box .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+main section .text-box .bottom h1 {
+  font-weight: 300;
+  font-size: 2.3rem;
+}
+main section .text-box .bottom p {
+  font-weight: 300;
+  opacity: 0.7;
+  line-height: 1.6;
+}
+main section .text-box .bottom button {
+  background-color: transparent;
+  border: none;
+  text-align: start;
+  font-size: 1rem;
+  padding: 1rem 0rem;
+}
+main section .text-box .bottom button i {
+  font-size: 1.2rem;
+  border-radius: 50%;
+  border: 1px solid rgba(240, 238, 233, 0.5333333333);
+  padding: 0.6rem;
+  margin-right: 1rem;
+  background-color: #313131;
+}/*# sourceMappingURL=style.css.map */

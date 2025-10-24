@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+    color: #F0EEE9;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+@mixin flex-column($gap:0) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+main {
+    width: 100%;
+    background-color: #121212;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.8rem 1rem;
+
+        #brand-name {
+            a {
+                font-size: 1.2rem;
+                font-weight: 200;
+                text-decoration: none;
+            }
+        }
+
+        #nav-options {
+            a {
+                text-decoration: none;
+                background-color: #1E1E1E;
+                padding: 1rem 1.5rem;
+                border-radius: 0.5rem;
+            }
+
+            i {
+                font-size: 1.5rem;
+                background-color: #1E1E1E;
+                border-radius: 0.5rem;
+            }
+        }
+    }
+
+    section {
+        @include flex-column(1rem);
+        padding: 0rem 1rem;
+
+        img {
+            width: 100%;
+            border-radius: 0.5rem;
+        }
+
+        .text-box {
+            @include flex-column(5rem);
+            justify-content: space-between;
+            padding: 2.2rem 2rem;
+            background-color: #1E1E1E;
+            font-size: 1rem;
+
+            .top {
+                font-weight: 400;
+            }
+
+            .bottom {
+                @include flex-column(0.8rem);
+
+                h1 {
+                    font-weight: 300;
+                    font-size: 2.3rem;
+                }
+
+                p {
+                    font-weight: 300;
+                    opacity: 0.7;
+                    line-height: 1.6;
+                }
+
+                button {
+                    background-color: transparent;
+                    border: none;
+                    text-align: start;
+                    font-size: 1rem;
+                    padding: 1rem 0rem;
+
+                    i {
+                        font-size: 1.2rem;
+                        border-radius: 50%;
+                        border: 1px solid #f0eee988;
+                        padding: 0.6rem;
+                        margin-right: 1rem;
+                        background-color: #313131;
+                    }
+                }
+            }
+        }
+    }
+}
