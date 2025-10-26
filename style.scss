@@ -18,6 +18,10 @@ html {
 }
 
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 @mixin flex-column($gap: 0) {
     display: flex;
     flex-direction: column;
@@ -36,11 +40,11 @@ main {
         justify-content: space-between;
         align-items: center;
         gap: 5rem;
-        padding: 1.8rem 1rem;
+        padding: 1rem 2rem;
 
         #brand-name {
             a {
-                font-size: 1.2rem;
+                font-size: 1.5rem;
                 font-weight: 200;
                 text-decoration: none;
             }
@@ -268,6 +272,97 @@ main {
             }
         }
     }
+
+    section.view-5 {
+        max-width: 2000px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        padding: 0.5rem 2.5rem;
+
+        h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.3rem;
+        }
+
+        h3 {
+            display: none;
+        }
+
+        h3:hover {
+            cursor: pointer;
+        }
+    }
+
+    section.view-6 {
+        max-width: 2000px;
+        @include flex-column(1rem);
+        padding: 0rem 1rem;
+        gap: 2rem;
+        width: 100%;
+
+        .card {
+            width: 100%;
+            aspect-ratio: 1/1;
+            background-size: cover;
+            border-radius: 0.5rem;
+            @include flex-column(0rem);
+            justify-content: space-between;
+            padding: 1.5rem;
+
+            .icon,
+            .bottom {
+                background-color: rgba(54, 54, 54, 0.575);
+                backdrop-filter: blur(8px);
+                border: 1px solid rgba(255, 255, 255, 0.326);
+                border-radius: 0.5rem;
+                padding: 0.5rem;
+            }
+
+            .top {
+                display: flex;
+                justify-content: flex-end;
+                gap: 0.7rem;
+
+                .icon {
+                    border-radius: 50%;
+                    font-size: 1.2rem;
+                    padding: 0.5rem;
+                    transition: all 0.2s ease;
+
+                    i {
+                        color: rgba(255, 255, 255, 0.703);
+                    }
+                }
+
+                .icon:hover {
+                    cursor: pointer;
+                    border: 1px solid rgb(255, 255, 255);
+                }
+            }
+
+            .bottom {
+                display: flex;
+                justify-content: space-between;
+                padding: 1.5rem;
+                font-size: 1.5rem;
+            }
+
+        }
+
+        .card:nth-child(1) {
+            background-image: url(https://assets-global.website-files.com/63cffb7c16ab3347fc9734c8/63d2ccbd7d003dfb6a1bdecb_team-01.webp);
+        }
+
+        .card:nth-child(2) {
+            background-image: url(https://assets-global.website-files.com/63cffb7c16ab3347fc9734c8/63d2ccbd2e12fa747e999689_team-02-p-500.webp);
+        }
+
+        .card:nth-child(3) {
+            background-image: url(https://assets-global.website-files.com/63cffb7c16ab3347fc9734c8/63d2ccbdc1f945f817bf4fd7_team-03-p-500.webp);
+        }
+    }
 }
 
 @media (min-width: 1000px) {
@@ -369,6 +464,22 @@ main {
                     }
                 }
             }
+        }
+
+        section.view-5 {
+            padding: 1rem 5rem;
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            h3 {
+                display: inline;
+            }
+        }
+
+        section.view-6 {
+            flex-direction: row;
+            padding: 0rem 1.5rem;
         }
     }
 }
