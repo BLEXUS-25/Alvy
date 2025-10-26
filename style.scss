@@ -26,7 +26,7 @@ html {
 
 main {
     width: 100%;
-    @include flex-column(0rem);
+    @include flex-column(1rem);
     align-items: center;
 
     nav {
@@ -86,7 +86,7 @@ main {
         }
     }
 
-    section {
+    section.view-1 {
         max-width: 2000px;
         @include flex-column(1rem);
         padding: 0rem 1rem;
@@ -146,11 +146,133 @@ main {
             }
         }
     }
+
+    section.view-2 {
+        max-width: 2000px;
+        @include flex-column(2rem);
+        width: 100%;
+        padding: 2.2rem 2rem;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+
+        .sub {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+
+            .element {
+                text-align: center;
+
+                small {
+                    opacity: 0.6;
+                }
+
+                h2 {
+                    font-size: 2.4rem;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+
+    section.view-3 {
+        max-width: 2000px;
+        @include flex-column(1rem);
+        padding: 0rem 1rem;
+
+        .sub-1 {
+            width: 100%;
+
+            img {
+                width: 100%;
+                border-radius: 0.5rem;
+            }
+        }
+
+        .sub-2 {
+            @include flex-column(5rem);
+            justify-content: space-between;
+            padding: 2.2rem 2rem;
+            background-color: #1E1E1E;
+            font-size: 1rem;
+            border-radius: 0.5rem;
+            font-family: Arial, Helvetica, sans-serif;
+
+            .top {
+                font-weight: 400;
+            }
+
+            .bottom {
+                @include flex-column(0.8rem);
+
+                h1 {
+                    font-weight: 300;
+                    font-size: 2.3rem;
+                }
+
+                .paragraph {
+
+                    p {
+                        font-weight: 300;
+                        opacity: 0.7;
+                        line-height: 1.6;
+                    }
+                }
+            }
+        }
+    }
+
+    section.view-4 {
+        max-width: 2000px;
+        @include flex-column(1rem);
+        padding: 0rem 1rem;
+
+        .sub-1 {
+            width: 100%;
+
+            img {
+                width: 100%;
+                border-radius: 0.5rem;
+            }
+        }
+
+        .sub-2 {
+            @include flex-column(5rem);
+            justify-content: space-between;
+            padding: 2.2rem 2rem;
+            background-color: #1E1E1E;
+            font-size: 1rem;
+            border-radius: 0.5rem;
+            font-family: Arial, Helvetica, sans-serif;
+
+            .top {
+                font-weight: 400;
+            }
+
+            .bottom {
+                @include flex-column(0.8rem);
+
+                h1 {
+                    font-weight: 300;
+                    font-size: 2.3rem;
+                }
+
+                .paragraph {
+
+                    p {
+                        font-weight: 300;
+                        opacity: 0.7;
+                        line-height: 1.6;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: 1000px) {
     main {
-        section {
+        section.view-1 {
             flex-direction: row;
 
             .sub-1,
@@ -160,6 +282,7 @@ main {
 
             .sub-2 {
                 padding: 3rem 3.5rem;
+
                 .bottom {
                     h1 {
                         width: 80%;
@@ -168,6 +291,81 @@ main {
 
                     p {
                         width: 80%;
+                    }
+                }
+            }
+        }
+
+        section.view-2 {
+            flex-direction: row;
+
+            .sub {
+                .element {
+
+                    small {
+                        font-size: 1rem;
+                    }
+
+                    h2 {
+                        font-size: 4rem;
+                    }
+                }
+            }
+        }
+
+        section.view-3 {
+            flex-direction: row-reverse;
+
+            .sub-1,
+            .sub-2 {
+                width: 50%;
+            }
+
+            .sub-2 {
+                padding: 3rem 3.5rem;
+
+                .bottom {
+                    h1 {
+                        width: 80%;
+                        font-size: 3.5rem;
+                    }
+
+                    .paragraph {
+                        display: flex;
+                        gap: 2rem;
+
+                        p {
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+        }
+
+        section.view-4 {
+            flex-direction: row;
+
+            .sub-1,
+            .sub-2 {
+                width: 50%;
+            }
+
+            .sub-2 {
+                padding: 3rem 3.5rem;
+
+                .bottom {
+                    h1 {
+                        width: 80%;
+                        font-size: 3.5rem;
+                    }
+
+                    .paragraph {
+                        display: flex;
+                        gap: 2rem;
+
+                        p {
+                            width: 80%;
+                        }
                     }
                 }
             }
